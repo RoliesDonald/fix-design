@@ -1,0 +1,32 @@
+:root{
+    --bg: #151c2c;
+    --bgSoft:#172136;
+    --text:#f3f3f3;
+    --textSoft:#b7bac1;
+    --bgLight: #F9FAFB;
+    --textLight:#1F2937;
+    --textLight2:#9CA3AF;
+    --textLight3:#5A626D;
+    --mainBlue:#0B2299;
+    --lightBlue:#0329EE;
+    --mainRed:#BF3131;
+    --green:#0C8C09;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}

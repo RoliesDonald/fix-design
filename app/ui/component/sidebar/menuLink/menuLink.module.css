@@ -1,0 +1,18 @@
+.container{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.container:hover, .active{
+    background-color: var(--textLight3);
+    color: var(--text);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+

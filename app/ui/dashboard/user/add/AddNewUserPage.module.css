@@ -1,0 +1,49 @@
+.container {
+    background-color: var(--bgSoft);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form input, .form select {
+    width: 48%;
+}
+.form input, 
+.form textarea, 
+.form select{
+    
+    padding: 30px;
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid #2e374a;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    padding: 15px;
+}
+
+.form button{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 40px;
+    height: 40px;
+    background-color:var(--mainRed);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: aliceblue;
+    
+}
+
+.form textarea{
+    width: 100%;
+    resize: none;
+}

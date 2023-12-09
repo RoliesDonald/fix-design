@@ -1,0 +1,45 @@
+.container{
+    background-color: var(--bgSoft);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container:hover{
+    background-color: #2e374a;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.number{
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.detail{
+    font-size: 16px;
+}
+
+.positive{
+    color: var(--green);
+    font-weight: bolder;
+
+}
+
+.negative{
+    color:var(--mainRed);
+    font-weight: 700;
+    font-style: italic;
+}
