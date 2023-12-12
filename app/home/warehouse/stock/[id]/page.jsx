@@ -1,7 +1,7 @@
 import styles from "@/app/ui/dashboard/user/detailUser/detailUser.module.css"
 import Image from "next/image"
 
-const DetailUserPage = () => {
+const DetailPartPage = () => {
     return (
         <div className={styles.container}>
             <div className={styles.infoListContainer}>
@@ -40,4 +40,4 @@ const DetailUserPage = () => {
     )
 }
 
-export default DetailUserPage
+export default DetailPartPage

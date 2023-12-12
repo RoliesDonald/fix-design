@@ -15,6 +15,7 @@
     width: 48%;
 }
 .form input, 
+
 .form textarea, 
 .form select{
     
@@ -46,4 +47,12 @@
 .form textarea{
     width: 100%;
     resize: none;
+}
+
+.selectSmall{
+    display: flex;
+    flex: 2;
+    margin-left: 35px;
+    gap: 20px;
+   
 }

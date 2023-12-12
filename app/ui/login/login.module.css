@@ -10,4 +10,34 @@
     background-color: var(--bgSoft);
     padding: 50px;
     border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    color: var(--textSoft);
+    /* justify-content: center; */
+}
+
+.form input{
+    padding: 20px;
+    border: 2px solid var(--borderWhite);
+    border-radius: 10px;
+    background-color: var(--bg);
+    font-size: 1.1em;
+}
+
+.form button{
+    width: 100%;
+    color: var(--bgLight);
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background-color: var(--mainBlue);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0;
+    cursor: pointer;
 }

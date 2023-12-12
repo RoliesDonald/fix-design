@@ -1,5 +1,4 @@
 import { DropdownActions } from './dropdownAction'
-import Button from '../button/button';
 import Link from 'next/link';
 const DropdownMenu = () => {
 
@@ -8,7 +7,7 @@ const DropdownMenu = () => {
   };
 
   const handleMenuTwo = () => {
-    <Link href={'app/login'}> </Link>
+    <Link href='/app/login'><button>ppp</button> </Link>
   };
   return (
     <div>

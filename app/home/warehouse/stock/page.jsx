@@ -1,9 +1,17 @@
+import { fectParts } from "@/app/lib/data"
 import Pagination from "@/app/ui/component/pagination/pagination"
 import Search from "@/app/ui/component/search/search"
 import styles from "@/app/ui/dashboard/warehouse/warehouse.module.css"
 import Link from "next/link"
 
-const StockPage = () => {
+
+
+const StockPage = async ({ searchParams }) => {
+
+    const q = searchParams?.q || "";
+    const page = searchParams?.page || 1;
+    const { count, part } = await fectParts(q, page);
+
     return (
         <div className={styles.container}>
             <div className={styles.top}>
@@ -15,7 +23,7 @@ const StockPage = () => {
             <table className={styles.table}>
                 <thead>
                     <tr>
-                        <td>Id</td>
+
                         <td>Nama Barang</td>
                         <td>Kode Barang</td>
                         <td>Stok</td>
@@ -26,29 +34,30 @@ const StockPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>13</td>
-                        <td>
-                            Filter Solar
-                        </td>
-                        <td>ME013307</td>
-                        <td>150</td>
-                        <td>15</td>
-                        <td>pcs</td>
-                        <td>115.000</td>
-                        <td>
-                            <div className={styles.buttons}>
-                                <Link href="/">
-                                    <button className={`${styles.button} ${styles.view}`}>Detail</button>
-                                </Link>
-                                <button className={`${styles.button} ${styles.tambah}`}>Tambah</button>
-                                <button className={`${styles.button} ${styles.delete}`}>Hapus</button>
-                            </div>
-                        </td>
-                    </tr>
+                    {part.map(parts => (
+                        <tr key={parts.id}>
+                            <td>
+                                {parts.partName}
+                            </td>
+                            <td>{parts.partNum}</td>
+                            <td>{parts.stockPart}</td>
+                            <td>{parts.minStock}</td>
+                            <td>{parts.unit}</td>
+                            <td>{parts.salePrice}</td>
+                            <td>
+                                <div className={styles.buttons}>
+                                    <Link href={`/home/warehouse/stock/${parts._id}`}>
+                                        <button className={`${styles.button} ${styles.view}`}>Detail</button>
+                                    </Link>
+                                    <button className={`${styles.button} ${styles.tambah}`}>Tambah</button>
+                                    <button className={`${styles.button} ${styles.delete}`}>Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
-            <Pagination />
+            <Pagination count={count} />
         </div>
     )
 }
